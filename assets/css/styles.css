@@ -259,6 +259,22 @@ section[id] {
   transition: all var(--transition-normal);
   padding: 16px 0;
 }
+.site-nav-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.8) 60%, rgba(7, 21, 33, 0) 100%);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.site-nav-wrapper.scrolled::before {
+  opacity: 1;
+}
 .site-nav-wrapper.scrolled {
   padding: 8px 0;
 }
@@ -3038,7 +3054,13 @@ section[id] {
 
   /* Navigation Bar */
   .site-nav-wrapper {
-    top: 10px;
+    top: 0;
+    padding: 10px 0;
+  }
+  .site-nav-wrapper::before {
+    height: calc(100% + 20px);
+    background: linear-gradient(to bottom, #071521 0%, rgba(7, 21, 33, 0.96) 65%, rgba(7, 21, 33, 0) 100%);
+    opacity: 1; /* Always mask out content scrolling behind top on mobile */
   }
   .site-nav-wrapper .container.nav-container {
     width: 98%;
@@ -3108,14 +3130,17 @@ section[id] {
 
   /* Hero Section */
   .hero-section {
-    padding-top: 85px;
+    padding-top: 110px;
     padding-bottom: 40px;
     min-height: 100svh;
   }
-  .hero-badge-pill {
-    font-size: 0.72rem;
-    padding: 6px 14px;
+  .hero-trust-badge {
+    font-size: 0.7rem;
+    padding: 6px 12px;
     margin-bottom: 18px;
+    line-height: 1.4;
+    text-align: center;
+    max-width: 92%;
   }
   .hero-headline {
     font-size: 2.1rem;
