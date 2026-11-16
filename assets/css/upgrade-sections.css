@@ -1793,6 +1793,16 @@ img, video, canvas, iframe {
   max-width: 100%;
 }
 
+/* Static Sticky Mobile Drawer Header */
+.mobile-drawer-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+  background: rgba(7, 21, 33, 0.98) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+}
+
 /* --------------------------------------------------------------------------
    1. Breakpoint: <= 991px (Tablets & Foldables)
    -------------------------------------------------------------------------- */
