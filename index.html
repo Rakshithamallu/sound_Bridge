@@ -36,6 +36,7 @@
 
   <!-- Custom Design System CSS -->
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/upgrade-sections.css">
 
   <!-- Structured Data (JSON-LD MedicalBusiness) strictly using factual source info -->
   <script type="application/ld+json">
@@ -125,10 +126,13 @@
         <!-- Desktop Navigation Links -->
         <ul class="nav-links">
           <li><a href="#hero" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#hearing-problems" class="nav-link">Hearing Problems</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#solutions" class="nav-link">Solutions</a></li>
-          <li><a href="#journey" class="nav-link">Journey</a></li>
+          <li><a href="#hearing-aids" class="nav-link">Hearing Aids</a></li>
+          <li><a href="#brands" class="nav-link">Brands</a></li>
+          <li><a href="#benefits" class="nav-link">Benefits</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing &amp; EMI</a></li>
           <li><a href="#reviews" class="nav-link">Reviews</a></li>
           <li><a href="#gallery" class="nav-link">Gallery</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -184,14 +188,19 @@
     </div>
     <ul class="mobile-nav-list">
       <li class="mobile-nav-item"><a href="#hero">Home</a></li>
-      <li class="mobile-nav-item"><a href="#about">About SoundBridge</a></li>
+      <li class="mobile-nav-item"><a href="#about">About Us</a></li>
+      <li class="mobile-nav-item"><a href="#hearing-problems">Hearing Problems</a></li>
       <li class="mobile-nav-item"><a href="#services">Clinical Services</a></li>
-      <li class="mobile-nav-item"><a href="#solutions">Hearing Solutions</a></li>
-      <li class="mobile-nav-item"><a href="#journey">The Sound Journey</a></li>
+      <li class="mobile-nav-item"><a href="#hearing-aids">Hearing Aids</a></li>
+      <li class="mobile-nav-item"><a href="#brands">Hearing Aid Brands</a></li>
+      <li class="mobile-nav-item"><a href="#pricing">Pricing &amp; EMI</a></li>
+      <li class="mobile-nav-item"><a href="#benefits">Benefits</a></li>
+      <li class="mobile-nav-item"><a href="#why-soundbridge">Why SoundBridge</a></li>
+      <li class="mobile-nav-item"><a href="#repair">Repair &amp; Support</a></li>
       <li class="mobile-nav-item"><a href="#reviews">Patient Reviews</a></li>
       <li class="mobile-nav-item"><a href="#gallery">Clinic Gallery</a></li>
-      <li class="mobile-nav-item"><a href="#location">Clinic Location</a></li>
-      <li class="mobile-nav-item"><a href="#contact">Contact</a></li>
+      <li class="mobile-nav-item"><a href="#faq">FAQs</a></li>
+      <li class="mobile-nav-item"><a href="#contact">Contact Us</a></li>
     </ul>
     <div class="mobile-drawer-footer">
       <a href="tel:918618459344" class="btn btn-secondary w-full">
@@ -223,13 +232,12 @@
 
         <!-- Headline -->
         <h1 class="hero-headline">
-          HEAR BETTER.<br>
-          <span class="gradient-text">CONNECT DEEPER.</span>
+          Rediscover the World of Sound with <span class="gradient-text">SoundBridge</span>
         </h1>
 
         <!-- Supporting Copy -->
         <p class="hero-subhead">
-          Personalized speech, hearing and audiology care designed around you.
+          Expert Hearing Care, Advanced Hearing Technology and Personalized Speech &amp; Hearing Solutions in Nagarbhavi, Bengaluru.
         </p>
 
         <!-- CTA Group -->
@@ -238,9 +246,21 @@
             <span>Book an Appointment</span>
             <i data-lucide="calendar"></i>
           </a>
-          <a href="#services" class="btn btn-secondary btn-lg">
-            <span>Explore Our Care</span>
-            <i data-lucide="headphones"></i>
+          <a href="#appointment" class="btn btn-secondary btn-lg" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Consultation';">
+            <span>Free Hearing Consultation</span>
+            <i data-lucide="sparkles"></i>
+          </a>
+        </div>
+
+        <!-- Extra Quick Direct Action Buttons -->
+        <div class="hero-cta-group-v2 hero-interactive" style="margin-top: 14px;">
+          <a href="https://wa.me/918618459344?text=Hi%20SoundBridge%2C%20I%20am%20interested%20in%20hearing%20care%20consultation." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-hero">
+            <i data-lucide="message-circle"></i>
+            <span>WhatsApp Contact</span>
+          </a>
+          <a href="tel:918618459344" class="btn btn-call-hero">
+            <i data-lucide="phone-call"></i>
+            <span>Call Now: +91 8618459344</span>
           </a>
         </div>
 
@@ -358,15 +378,25 @@
           </div>
         </div>
 
-        <!-- 4 Authentic Pillars -->
-        <div class="about-pillars-grid">
+        <!-- 8 Authentic Healthcare Pillars -->
+        <div class="about-pillars-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
           <div class="pillar-card">
             <div class="pillar-icon-box">
               <i data-lucide="activity"></i>
             </div>
             <h3 class="pillar-title">Comprehensive Audiology</h3>
             <p class="pillar-desc">
-              From pediatric hearing tests to adult diagnostic audiometry, our highly trained audiologists provide thorough patient evaluations.
+              From pediatric hearing tests to adult diagnostic audiometry, our qualified audiologists provide thorough clinical evaluations using precision instruments.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <i data-lucide="clock"></i>
+            </div>
+            <h3 class="pillar-title">Early Hearing Assessment</h3>
+            <p class="pillar-desc">
+              Early detection prevents auditory deprivation, reduces cognitive strain, and ensures children and adults maintain clear speech and connection.
             </p>
           </div>
 
@@ -392,6 +422,16 @@
 
           <div class="pillar-card">
             <div class="pillar-icon-box">
+              <i data-lucide="headphones"></i>
+            </div>
+            <h3 class="pillar-title">Trial &amp; Precision Fitting</h3>
+            <p class="pillar-desc">
+              Experience hearing aids in real acoustic settings with real-ear verification and tailored canal programming before making any final decision.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
               <i data-lucide="message-circle"></i>
             </div>
             <h3 class="pillar-title">Speech &amp; Language Care</h3>
@@ -399,6 +439,300 @@
               Dedicated speech language evaluations and structured therapy sessions designed to restore clear articulation, fluency, and cognitive expression.
             </p>
           </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <i data-lucide="heart-handshake"></i>
+            </div>
+            <h3 class="pillar-title">Patient-Focused Consultation</h3>
+            <p class="pillar-desc">
+              Unhurried, compassionate clinical appointments focused on listening to your personal challenges, family concerns, and daily acoustic needs.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <i data-lucide="wrench"></i>
+            </div>
+            <h3 class="pillar-title">Lifetime After-Sales Support</h3>
+            <p class="pillar-desc">
+              Continuous sound adjustments, ultrasonic cleaning, firmware updates, battery replacement, and repair services for your hearing instruments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- ==========================================================================
+         SECTION 6: HEARING PROBLEMS — UNDERSTAND YOUR HEARING
+         ========================================================================== -->
+    <section id="hearing-problems" class="hearing-problems-section" aria-label="Understanding Hearing Problems">
+      <div class="container">
+        <div class="text-center" style="max-width: 780px; margin: 0 auto;">
+          <span class="section-tag-badge">
+            <i data-lucide="help-circle"></i>
+            <span>Educational Awareness</span>
+          </span>
+          <h2 class="section-title">COMMON HEARING PROBLEMS &amp; SYMPTOMS</h2>
+          <p class="section-subtitle">
+            Recognizing early indicators of auditory and communication challenges helps safeguard cognitive vitality, relationships, and daily well-being.
+          </p>
+        </div>
+
+        <div class="problems-grid">
+          <!-- 1. Hearing Loss -->
+          <div class="problem-card">
+            <div class="problem-card-header">
+              <div class="problem-icon-wrap">
+                <i data-lucide="volume-x"></i>
+              </div>
+              <h3 class="problem-title">General Hearing Loss</h3>
+            </div>
+            <div class="problem-body">
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">What is it?</span>
+                <p class="problem-fact-text">A gradual or sudden reduction in the ability to perceive sounds clearly across frequency ranges.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">Common Symptoms:</span>
+                <p class="problem-fact-text">Turning TV volume abnormally high, frequently asking people to repeat themselves, muffled speech.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">When to see an Audiologist:</span>
+                <p class="problem-fact-text">When family members notice speech difficulty or listening requires exhausting mental effort.</p>
+              </div>
+            </div>
+            <div class="problem-card-footer">
+              <span style="font-size: 0.78rem; color: var(--text-dim);">Pure Tone Audiometry (PTA) Recommended</span>
+              <a href="#appointment" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Test For Kids And Adults';">
+                <span>Check Hearing</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Age-Related Hearing Loss (Presbycusis) -->
+          <div class="problem-card">
+            <div class="problem-card-header">
+              <div class="problem-icon-wrap">
+                <i data-lucide="user"></i>
+              </div>
+              <h3 class="problem-title">Age-Related Hearing Loss</h3>
+            </div>
+            <div class="problem-body">
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">What is it?</span>
+                <p class="problem-fact-text">Natural sensorineural wear of delicate inner-ear hair cells (Presbycusis) usually starting after age 55.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">Common Symptoms:</span>
+                <p class="problem-fact-text">High-pitched sounds (children/women's voices, birdsong, consonants like s, f, th) become unclear.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">How Audiologists Help:</span>
+                <p class="problem-fact-text">Prescribing modern discreet hearing aids with targeted high-frequency speech enhancement algorithms.</p>
+              </div>
+            </div>
+            <div class="problem-card-footer">
+              <span style="font-size: 0.78rem; color: var(--text-dim);">Senior-Friendly Fittings Available</span>
+              <a href="#appointment" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Consultation';">
+                <span>Book Evaluation</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Noise-Induced Hearing Loss -->
+          <div class="problem-card">
+            <div class="problem-card-header">
+              <div class="problem-icon-wrap">
+                <i data-lucide="zap"></i>
+              </div>
+              <h3 class="problem-title">Noise-Induced Hearing Loss</h3>
+            </div>
+            <div class="problem-body">
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">What is it?</span>
+                <p class="problem-fact-text">Damage caused by prolonged exposure to loud industrial sounds, traffic, machinery, or loud personal earphones.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">Common Symptoms:</span>
+                <p class="problem-fact-text">Temporary or permanent dullness in hearing, ear fullness, or ringing sounds after loud events.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">When to consider testing:</span>
+                <p class="problem-fact-text">Immediately after experiencing sudden acoustic trauma or recurring ringing post-shift.</p>
+              </div>
+            </div>
+            <div class="problem-card-footer">
+              <span style="font-size: 0.78rem; color: var(--text-dim);">Custom Hearing Protection Available</span>
+              <a href="#appointment" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Consultation';">
+                <span>Book Test</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Difficulty Understanding Conversations -->
+          <div class="problem-card">
+            <div class="problem-card-header">
+              <div class="problem-icon-wrap">
+                <i data-lucide="message-square"></i>
+              </div>
+              <h3 class="problem-title">Conversation Clarity Issues</h3>
+            </div>
+            <div class="problem-body">
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">What is it?</span>
+                <p class="problem-fact-text">Hearing that people are speaking, but being unable to decipher words and sentences clearly ("I can hear, but can't understand").</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">Possible Causes:</span>
+                <p class="problem-fact-text">High-frequency cochlear nerve degradation or auditory processing challenges.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">How Audiologists Help:</span>
+                <p class="problem-fact-text">Speech discrimination testing and multi-channel directional hearing instruments.</p>
+              </div>
+            </div>
+            <div class="problem-card-footer">
+              <span style="font-size: 0.78rem; color: var(--text-dim);">Speech Discrimination Testing</span>
+              <a href="#appointment" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+                <span>Try Hearing Aids</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Tinnitus (Ringing in the Ears) -->
+          <div class="problem-card">
+            <div class="problem-card-header">
+              <div class="problem-icon-wrap">
+                <i data-lucide="bell"></i>
+              </div>
+              <h3 class="problem-title">Tinnitus (Ear Ringing)</h3>
+            </div>
+            <div class="problem-body">
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">What is it?</span>
+                <p class="problem-fact-text">Perception of ringing, buzzing, hissing, or roaring in one or both ears without an external sound source.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">Common Symptoms:</span>
+                <p class="problem-fact-text">Persistent high-pitched ringing noticeable especially in quiet rooms, sleep disturbances, irritability.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">How Audiologists Help:</span>
+                <p class="problem-fact-text">Diagnostic tinnitus pitch-matching, sound therapy protocols, and specialized tinnitus-masking hearing devices.</p>
+              </div>
+            </div>
+            <div class="problem-card-footer">
+              <span style="font-size: 0.78rem; color: var(--text-dim);">Tinnitus Masking Available</span>
+              <a href="#appointment" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Consultation';">
+                <span>Consult Audiologist</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 6. Hearing Problems in Children -->
+          <div class="problem-card">
+            <div class="problem-card-header">
+              <div class="problem-icon-wrap">
+                <i data-lucide="baby"></i>
+              </div>
+              <h3 class="problem-title">Pediatric Hearing Difficulties</h3>
+            </div>
+            <div class="problem-body">
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">What is it?</span>
+                <p class="problem-fact-text">Congenital or acquired hearing issues affecting infants, toddlers, and school-age children.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">Common Symptoms:</span>
+                <p class="problem-fact-text">Not startling to loud noises, delayed vocal babbling, inattentiveness in class, watching faces intently.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">When to see an Audiologist:</span>
+                <p class="problem-fact-text">Immediately if milestones are delayed. Early childhood hearing is critical for brain and speech development.</p>
+              </div>
+            </div>
+            <div class="problem-card-footer">
+              <span style="font-size: 0.78rem; color: var(--text-dim);">Pediatric Assessment Protocols</span>
+              <a href="#appointment" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Test For Kids And Adults';">
+                <span>Book Child Screening</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 7. Speech & Language Delays -->
+          <div class="problem-card">
+            <div class="problem-card-header">
+              <div class="problem-icon-wrap">
+                <i data-lucide="message-circle"></i>
+              </div>
+              <h3 class="problem-title">Speech &amp; Language Delays</h3>
+            </div>
+            <div class="problem-body">
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">What is it?</span>
+                <p class="problem-fact-text">Difficulty articulating age-appropriate sounds, limited expressive vocabulary, stuttering, or stammering.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">Common Causes:</span>
+                <p class="problem-fact-text">Undetected fluid in ears (glue ear), developmental delays, oral-motor coordination challenges.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">How We Help:</span>
+                <p class="problem-fact-text">Comprehensive Speech-Language Pathologist evaluations and structured one-on-one therapy programs.</p>
+              </div>
+            </div>
+            <div class="problem-card-footer">
+              <span style="font-size: 0.78rem; color: var(--text-dim);">Speech Therapy Sessions Available</span>
+              <a href="#appointment" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Speech and language evaluation';">
+                <span>Book Speech Assessment</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 8. Difficulty Hearing in Noisy Places -->
+          <div class="problem-card">
+            <div class="problem-card-header">
+              <div class="problem-icon-wrap">
+                <i data-lucide="users"></i>
+              </div>
+              <h3 class="problem-title">Hearing in Noisy Environments</h3>
+            </div>
+            <div class="problem-body">
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">What is it?</span>
+                <p class="problem-fact-text">The classic "cocktail party effect" struggle where background restaurant/social babble drowns out table conversations.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">Why it happens:</span>
+                <p class="problem-fact-text">Loss of binaural spatial separation cues that the brain normally uses to filter out surrounding clamor.</p>
+              </div>
+              <div class="problem-fact-item">
+                <span class="problem-fact-label">How Modern Tech Helps:</span>
+                <p class="problem-fact-text">Dual binaural beamforming microphones and AI noise-reduction in latest generation hearing aids.</p>
+              </div>
+            </div>
+            <div class="problem-card-footer">
+              <span style="font-size: 0.78rem; color: var(--text-dim);">AI Beamforming Demonstrations</span>
+              <a href="#appointment" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+                <span>Try In Clinic</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="medical-disclaimer-note">
+          <i data-lucide="alert-circle"></i>
+          <span><strong>Clinical Note:</strong> Educational information provided here is for awareness and guidance only. It is not a substitute for formal clinical diagnosis by a qualified medical professional or certified audiologist.</span>
         </div>
       </div>
     </section>
@@ -717,6 +1051,829 @@
             <a href="#appointment" class="btn btn-primary" style="align-self: flex-start;">
               <span>Schedule a Device Trial</span>
               <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- ==========================================================================
+         SECTION 8: HEARING AID PRODUCTS CATALOG (FILTERABLE & DETAILED)
+         ========================================================================== -->
+    <section id="hearing-aids" class="products-catalog-section" aria-label="Hearing Aid Products Catalog">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+          <span class="section-tag-badge">
+            <i data-lucide="headphones"></i>
+            <span>Product Portfolio</span>
+          </span>
+          <h2 class="section-title">HEARING AID STYLES &amp; FORM FACTORS</h2>
+          <p class="section-subtitle">
+            From completely invisible deep-canal instruments to powerful rechargeable streaming devices, explore our comprehensive selection matched to your audiogram and lifestyle.
+          </p>
+        </div>
+
+        <!-- Interactive Filter Controls -->
+        <div class="catalog-filter-bar">
+          <button type="button" class="catalog-filter-btn active" data-filter="all">All Styles</button>
+          <button type="button" class="catalog-filter-btn" data-filter="discreet">Discreet &amp; Invisible</button>
+          <button type="button" class="catalog-filter-btn" data-filter="rechargeable">Rechargeable</button>
+          <button type="button" class="catalog-filter-btn" data-filter="bluetooth">Bluetooth &amp; Wireless</button>
+          <button type="button" class="catalog-filter-btn" data-filter="custom">Custom-Moulded</button>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="catalog-grid">
+          <!-- 1. BTE -->
+          <div class="product-style-card" data-category="bluetooth,all">
+            <div class="product-card-visual">
+              <span class="product-style-badge">Maximum Power</span>
+              <img src="assets/images/gallery-4.jpg" alt="Behind-the-Ear BTE Hearing Aid" loading="lazy">
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-title">Behind-the-Ear (BTE)</h3>
+              <span class="product-card-tagline">Robust amplification with comfortable ear hook and custom mould</span>
+              <p class="product-card-desc">
+                Houses all electronic components in an ergonomic durable case resting behind the ear. Sound travels via a clear slim tube into the ear canal.
+              </p>
+              <ul class="product-features-checklist">
+                <li><i data-lucide="check"></i> Suitable for mild to profound severe hearing losses</li>
+                <li><i data-lucide="check"></i> Intuitive tactile buttons &amp; volume rockers</li>
+                <li><i data-lucide="check"></i> Long battery life and robust moisture sealing</li>
+                <li><i data-lucide="check"></i> Compatible with telecoil, FM systems &amp; Bluetooth streamers</li>
+              </ul>
+              <div class="product-candidate-pill">
+                <strong>Best suited for:</strong> Patients wanting easy handling, higher amplification reserve, and long durability.
+              </div>
+              <div class="product-card-actions">
+                <a href="#appointment" class="btn btn-primary" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+                  <span>Enquire BTE</span>
+                  <i data-lucide="calendar"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. RIC -->
+          <div class="product-style-card" data-category="rechargeable,bluetooth,all">
+            <div class="product-card-visual">
+              <span class="product-style-badge">Most Popular</span>
+              <img src="assets/images/gallery-2.jpg" alt="Receiver-in-Canal RIC Hearing Aid" loading="lazy">
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-title">Receiver-in-Canal (RIC)</h3>
+              <span class="product-card-tagline">Open-fit comfort with speaker placed directly in the canal</span>
+              <p class="product-card-desc">
+                Combines an ultra-discreet case behind the ear with an insulated micro-wire connecting directly to an acoustic speaker sealed in the canal.
+              </p>
+              <ul class="product-features-checklist">
+                <li><i data-lucide="check"></i> Natural open acoustics, eliminates the "plugged-ear" occlusion</li>
+                <li><i data-lucide="check"></i> Fast inductive contact-free charging cases</li>
+                <li><i data-lucide="check"></i> Hands-free Bluetooth phone streaming (iOS &amp; Android)</li>
+                <li><i data-lucide="check"></i> Dual directional speech tracking microphones</li>
+              </ul>
+              <div class="product-candidate-pill">
+                <strong>Best suited for:</strong> Active professionals and seniors desiring natural voice quality and modern smartphone convenience.
+              </div>
+              <div class="product-card-actions">
+                <a href="#appointment" class="btn btn-primary" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+                  <span>Enquire RIC</span>
+                  <i data-lucide="calendar"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. ITE -->
+          <div class="product-style-card" data-category="custom,all">
+            <div class="product-card-visual">
+              <span class="product-style-badge">Custom Molded</span>
+              <img src="assets/images/gallery-5.jpg" alt="In-the-Ear ITE Hearing Aid" loading="lazy">
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-title">In-the-Ear (ITE)</h3>
+              <span class="product-card-tagline">Custom-cast to fill the outer bowl of the ear securely</span>
+              <p class="product-card-desc">
+                Individually molded from 3D silicone impressions of your outer ear, packaging digital processors and battery compartments into a single custom shell.
+              </p>
+              <ul class="product-features-checklist">
+                <li><i data-lucide="check"></i> No components resting behind the ear; seamless with spectacles</li>
+                <li><i data-lucide="check"></i> Larger controls make insertion and removal effortless</li>
+                <li><i data-lucide="check"></i> Houses directional microphones for improved speech focus</li>
+                <li><i data-lucide="check"></i> Ample battery reserve for all-day continuous use</li>
+              </ul>
+              <div class="product-candidate-pill">
+                <strong>Best suited for:</strong> Individuals with mild to severe loss who wear glasses or prefer one-piece simplicity.
+              </div>
+              <div class="product-card-actions">
+                <a href="#appointment" class="btn btn-primary" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+                  <span>Enquire ITE</span>
+                  <i data-lucide="calendar"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. CIC -->
+          <div class="product-style-card" data-category="discreet,custom,all">
+            <div class="product-card-visual">
+              <span class="product-style-badge">Discreet Canal</span>
+              <img src="assets/images/gallery-3.jpg" alt="Completely-in-Canal CIC Hearing Aid" loading="lazy">
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-title">Completely-in-Canal (CIC)</h3>
+              <span class="product-card-tagline">Discreet design fitting deep within the natural ear canal</span>
+              <p class="product-card-desc">
+                Custom-sculpted to sit entirely within the ear canal with only a tiny, transparent removal cord visible on close inspection.
+              </p>
+              <ul class="product-features-checklist">
+                <li><i data-lucide="check"></i> Natural sound localization utilizing the outer ear's anatomy</li>
+                <li><i data-lucide="check"></i> Significantly reduced wind noise interference outdoors</li>
+                <li><i data-lucide="check"></i> Effortless use with regular telephone handsets</li>
+                <li><i data-lucide="check"></i> Custom color faceplate matching your skin tone</li>
+              </ul>
+              <div class="product-candidate-pill">
+                <strong>Best suited for:</strong> Mild to moderate hearing loss where cosmetic discretion and natural localization are priorities.
+              </div>
+              <div class="product-card-actions">
+                <a href="#appointment" class="btn btn-primary" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+                  <span>Enquire CIC</span>
+                  <i data-lucide="calendar"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. IIC -->
+          <div class="product-style-card" data-category="discreet,custom,all">
+            <div class="product-card-visual">
+              <span class="product-style-badge">100% Invisible</span>
+              <img src="assets/images/gallery-1.png" alt="Invisible-in-Canal IIC Hearing Aid" loading="lazy">
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-title">Invisible-in-Canal (IIC)</h3>
+              <span class="product-card-tagline">Resting past the second ear bend for complete visual invisibility</span>
+              <p class="product-card-desc">
+                The ultimate in cosmetic discretion. Cast using high-precision ear canal impressions, IIC devices sit deeply inside where shadows render them undetectable.
+              </p>
+              <ul class="product-features-checklist">
+                <li><i data-lucide="check"></i> Virtually invisible to onlookers from all viewing angles</li>
+                <li><i data-lucide="check"></i> Preserves complete pinna resonance for realistic sound</li>
+                <li><i data-lucide="check"></i> Automatic digital environment classification</li>
+                <li><i data-lucide="check"></i> Micro-pull cord for smooth, safe daily removal</li>
+              </ul>
+              <div class="product-candidate-pill">
+                <strong>Best suited for:</strong> Candidates with appropriate ear canal dimensions seeking total cosmetic invisibility.
+              </div>
+              <div class="product-card-actions">
+                <a href="#appointment" class="btn btn-primary" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+                  <span>Enquire IIC</span>
+                  <i data-lucide="calendar"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Rechargeable -->
+          <div class="product-style-card" data-category="rechargeable,all">
+            <div class="product-card-visual">
+              <span class="product-style-badge">Zero Batteries</span>
+              <img src="assets/images/gallery-2.jpg" alt="Rechargeable Hearing Aids Charging Case" loading="lazy">
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-title">Rechargeable Hearing Aids</h3>
+              <span class="product-card-tagline">Drop-in induction charging cases delivering all-day power</span>
+              <p class="product-card-desc">
+                Eliminates the frustration of buying and replacing tiny disposable button batteries. Simply dock your hearing aids in their smart charging case overnight.
+              </p>
+              <ul class="product-features-checklist">
+                <li><i data-lucide="check"></i> Up to 24-30 hours of continuous listening on a single charge</li>
+                <li><i data-lucide="check"></i> Portable power-bank case holds multiple on-the-go recharges</li>
+                <li><i data-lucide="check"></i> Quick 30-minute boost provides 5-6 hours of emergency use</li>
+                <li><i data-lucide="check"></i> Sealed unibody design protects against moisture and sweat</li>
+              </ul>
+              <div class="product-candidate-pill">
+                <strong>Best suited for:</strong> Seniors with limited hand dexterity and users seeking everyday convenience.
+              </div>
+              <div class="product-card-actions">
+                <a href="#appointment" class="btn btn-primary" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+                  <span>Enquire Rechargeable</span>
+                  <i data-lucide="calendar"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Bluetooth -->
+          <div class="product-style-card" data-category="bluetooth,all">
+            <div class="product-card-visual">
+              <span class="product-style-badge">Smart Connectivity</span>
+              <img src="assets/images/gallery-5.jpg" alt="Bluetooth Connected Hearing Aids" loading="lazy">
+            </div>
+            <div class="product-card-content">
+              <h3 class="product-card-title">Bluetooth &amp; AI Hearing Aids</h3>
+              <span class="product-card-tagline">Direct audio streaming from iPhone, Android, and Smart TV</span>
+              <p class="product-card-desc">
+                Transform your hearing aids into wireless stereo headsets. Stream crisp phone calls, video conferences, audiobooks, and TV sound directly into your ears.
+              </p>
+              <ul class="product-features-checklist">
+                <li><i data-lucide="check"></i> Hands-free phone answering with tap-to-talk sensors</li>
+                <li><i data-lucide="check"></i> Smartphone apps for discreet volume and equalizer control</li>
+                <li><i data-lucide="check"></i> Live remote fine-tuning sessions with our audiologist via app</li>
+                <li><i data-lucide="check"></i> "Find my hearing aid" GPS tracking assistance</li>
+              </ul>
+              <div class="product-candidate-pill">
+                <strong>Best suited for:</strong> Smartphone users, professionals in meetings, and avid entertainment lovers.
+              </div>
+              <div class="product-card-actions">
+                <a href="#appointment" class="btn btn-primary" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+                  <span>Enquire Bluetooth</span>
+                  <i data-lucide="calendar"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="medical-disclaimer-note">
+          <i data-lucide="info"></i>
+          <span><strong>Audiologist Recommendation:</strong> Device suitability depends on your exact audiogram, ear canal anatomy, listening environments, and manual dexterity. Schedule a clinical consultation to experience live trials of suitable models.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 9: HEARING AID BRANDS SHOWCASE
+         ========================================================================== -->
+    <section id="brands" class="brands-showcase-section" aria-label="Global Hearing Aid Brands">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+          <span class="section-tag-badge">
+            <i data-lucide="award"></i>
+            <span>Global Technology Partners</span>
+          </span>
+          <h2 class="section-title">TOP GLOBAL HEARING AID BRANDS</h2>
+          <p class="section-subtitle">
+            SoundBridge sources genuine instruments from the world's most reputable manufacturers, ensuring genuine warranties, calibrated parts, and official software programming.
+          </p>
+        </div>
+
+        <div class="brands-grid">
+          <!-- 1. Signia -->
+          <div class="brand-card">
+            <div class="brand-card-top">
+              <span class="brand-name-logo">SIGNIA</span>
+              <span class="brand-country-tag">Germany</span>
+            </div>
+            <p class="brand-desc">
+              Pioneers of Augmented Xperience (AX) and Integrated Xperience (IX) split-processing technology, separating speech from surrounding background noise for effortless conversation clarity.
+            </p>
+            <ul class="brand-highlights-list">
+              <li><i data-lucide="check"></i> Own Voice Processing (OVP 2.0) for natural self-voice</li>
+              <li><i data-lucide="check"></i> Signature Silk Charge&amp;Go ready-to-wear CIC devices</li>
+              <li><i data-lucide="check"></i> Signia Assistant AI sound customization via smartphone</li>
+            </ul>
+            <div class="brand-styles-row">
+              <span class="brand-style-pill">RIC</span>
+              <span class="brand-style-pill">BTE</span>
+              <span class="brand-style-pill">Instant-fit CIC</span>
+              <span class="brand-style-pill">Rechargeable</span>
+            </div>
+            <a href="#appointment" class="btn btn-secondary w-full" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+              <span>Explore Signia Range</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 2. Phonak -->
+          <div class="brand-card">
+            <div class="brand-card-top">
+              <span class="brand-name-logo">PHONAK</span>
+              <span class="brand-country-tag">Switzerland</span>
+            </div>
+            <p class="brand-desc">
+              Global leaders in audiological acoustics, renowned for AutoSense OS artificial intelligence and universal Bluetooth connectivity connecting to virtually any Bluetooth phone or audio source.
+            </p>
+            <ul class="brand-highlights-list">
+              <li><i data-lucide="check"></i> Universal hands-free connectivity (iOS, Android, PC)</li>
+              <li><i data-lucide="check"></i> Roger wireless microphone integration for difficult noisy rooms</li>
+              <li><i data-lucide="check"></i> Pediatric Lumity portfolio with water-resistant housings</li>
+            </ul>
+            <div class="brand-styles-row">
+              <span class="brand-style-pill">Audéo RIC</span>
+              <span class="brand-style-pill">Naída BTE</span>
+              <span class="brand-style-pill">Virto Custom</span>
+              <span class="brand-style-pill">Titanium IIC</span>
+            </div>
+            <a href="#appointment" class="btn btn-secondary w-full" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+              <span>Explore Phonak Range</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 3. Widex -->
+          <div class="brand-card">
+            <div class="brand-card-top">
+              <span class="brand-name-logo">WIDEX</span>
+              <span class="brand-country-tag">Denmark</span>
+            </div>
+            <p class="brand-desc">
+              Celebrated by musicians and audiophiles for delivering the most natural, undistorted sound quality. PureSound with ZeroDelay technology eliminates artificial delay-induced distortion.
+            </p>
+            <ul class="brand-highlights-list">
+              <li><i data-lucide="check"></i> PureSound ZeroDelay processing under 0.5 milliseconds</li>
+              <li><i data-lucide="check"></i> SoundSense Learn machine learning sound personalization</li>
+              <li><i data-lucide="check"></i> Zen fractal tones for evidence-based tinnitus management</li>
+            </ul>
+            <div class="brand-styles-row">
+              <span class="brand-style-pill">MOMENT RIC</span>
+              <span class="brand-style-pill">EVOKE</span>
+              <span class="brand-style-pill">Custom CIC</span>
+              <span class="brand-style-pill">Tinnitus Masker</span>
+            </div>
+            <a href="#appointment" class="btn btn-secondary w-full" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+              <span>Explore Widex Range</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 4. ReSound -->
+          <div class="brand-card">
+            <div class="brand-card-top">
+              <span class="brand-name-logo">ReSound</span>
+              <span class="brand-country-tag">Denmark</span>
+            </div>
+            <p class="brand-desc">
+              Pioneers in organic hearing, ReSound introduced the world's first Made for iPhone hearing aid. Their M&amp;RIE design places an extra microphone inside the ear canal for 360-degree organic directionality.
+            </p>
+            <ul class="brand-highlights-list">
+              <li><i data-lucide="check"></i> M&amp;RIE receiver with microphone inside the ear canal</li>
+              <li><i data-lucide="check"></i> Industry-leading ReSound Smart 3D application</li>
+              <li><i data-lucide="check"></i> Auracast broadcast audio readiness for public venues</li>
+            </ul>
+            <div class="brand-styles-row">
+              <span class="brand-style-pill">OMNIA RIC</span>
+              <span class="brand-style-pill">NEXIA</span>
+              <span class="brand-style-pill">Custom IIC</span>
+              <span class="brand-style-pill">Wireless Streamer</span>
+            </div>
+            <a href="#appointment" class="btn btn-secondary w-full" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+              <span>Explore ReSound Range</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 5. Oticon -->
+          <div class="brand-card">
+            <div class="brand-card-top">
+              <span class="brand-name-logo">OTICON</span>
+              <span class="brand-country-tag">Denmark</span>
+            </div>
+            <p class="brand-desc">
+              Built on "BrainHearing" philosophy, Oticon hearing aids support the brain's natural neural processing of 360-degree sound scenes via on-board Deep Neural Network (DNN) architectures.
+            </p>
+            <ul class="brand-highlights-list">
+              <li><i data-lucide="check"></i> Deep Neural Network trained on 12 million real soundscapes</li>
+              <li><i data-lucide="check"></i> OpenSound Navigator for reduced cognitive listening effort</li>
+              <li><i data-lucide="check"></i> Direct 2-way audio communication for iPhone and modern Android</li>
+            </ul>
+            <div class="brand-styles-row">
+              <span class="brand-style-pill">Intent RIC</span>
+              <span class="brand-style-pill">Real</span>
+              <span class="brand-style-pill">Own Custom</span>
+              <span class="brand-style-pill">Pediatric Sensei</span>
+            </div>
+            <a href="#appointment" class="btn btn-secondary w-full" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+              <span>Explore Oticon Range</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 6. Starkey -->
+          <div class="brand-card">
+            <div class="brand-card-top">
+              <span class="brand-name-logo">STARKEY</span>
+              <span class="brand-country-tag">USA</span>
+            </div>
+            <p class="brand-desc">
+              American precision engineering renowned for custom miniaturization and health-tracking sensors, including fall detection alerts, language translation, and Genesis AI processing.
+            </p>
+            <ul class="brand-highlights-list">
+              <li><i data-lucide="check"></i> Neuro Processor executing 80 million automatic adjustments/hour</li>
+              <li><i data-lucide="check"></i> Integrated fall detection alerts sent to family emergency contacts</li>
+              <li><i data-lucide="check"></i> Industry-leading all-day rechargeable wireless custom IIC/CIC</li>
+            </ul>
+            <div class="brand-styles-row">
+              <span class="brand-style-pill">Genesis AI</span>
+              <span class="brand-style-pill">Evolv AI</span>
+              <span class="brand-style-pill">Signature Series</span>
+              <span class="brand-style-pill">Rechargeable Custom</span>
+            </div>
+            <a href="#appointment" class="btn btn-secondary w-full" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+              <span>Explore Starkey Range</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="medical-disclaimer-note">
+          <i data-lucide="shield-check"></i>
+          <span><strong>Genuine Sourcing Guarantee:</strong> Products and models are dispensed based on patient hearing thresholds, ear morphology, and authorized sourcing channels. All instruments come with manufacturer warranty cards and original packaging.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 10: PRODUCT COMPARISON TABLE
+         ========================================================================== -->
+    <section id="comparison" class="comparison-section" aria-label="Hearing Aid Comparison">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+          <span class="section-tag-badge">
+            <i data-lucide="sliders"></i>
+            <span>Side-by-Side Analysis</span>
+          </span>
+          <h2 class="section-title">HEARING AID STYLE COMPARISON</h2>
+          <p class="section-subtitle">
+            Compare key specifications, wearing ergonomics, and technical capabilities to identify the best fit for your lifestyle.
+          </p>
+        </div>
+
+        <div class="table-responsive-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Style / Category</th>
+                <th>Wearing Position</th>
+                <th>Suitable Hearing Loss</th>
+                <th>Rechargeable Option</th>
+                <th>Direct Bluetooth</th>
+                <th>Cosmetic Visibility</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Receiver-in-Canal (RIC)</strong></td>
+                <td>Discreet Behind Ear + In Canal</td>
+                <td>Mild to Severe</td>
+                <td><span class="table-badge-yes"><i data-lucide="check-circle-2"></i> Yes (Lithium-ion)</span></td>
+                <td><span class="table-badge-yes"><i data-lucide="check-circle-2"></i> iOS &amp; Android</span></td>
+                <td>High Discretion</td>
+                <td>
+                  <a href="#appointment" class="btn btn-secondary" style="font-size: 0.78rem; padding: 6px 12px;" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+                    <span>Enquire</span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Invisible-in-Canal (IIC)</strong></td>
+                <td>Deep Canal Past 2nd Bend</td>
+                <td>Mild to Moderate</td>
+                <td><span class="table-badge-optional">Zinc-Air Battery (Size 10)</span></td>
+                <td><span class="table-badge-optional">App Control via Audio Tone</span></td>
+                <td>100% Invisible</td>
+                <td>
+                  <a href="#appointment" class="btn btn-secondary" style="font-size: 0.78rem; padding: 6px 12px;" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+                    <span>Enquire</span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Completely-in-Canal (CIC)</strong></td>
+                <td>Inside Ear Canal</td>
+                <td>Mild to Moderate-Severe</td>
+                <td><span class="table-badge-optional">Select Models / Size 10</span></td>
+                <td><span class="table-badge-optional">Optional Accessories</span></td>
+                <td>Virtually Invisible</td>
+                <td>
+                  <a href="#appointment" class="btn btn-secondary" style="font-size: 0.78rem; padding: 6px 12px;" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+                    <span>Enquire</span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>In-the-Ear (ITE)</strong></td>
+                <td>Outer Ear Concha Bowl</td>
+                <td>Mild to Severe</td>
+                <td><span class="table-badge-yes"><i data-lucide="check-circle-2"></i> Yes (Select Models)</span></td>
+                <td><span class="table-badge-yes"><i data-lucide="check-circle-2"></i> Direct Streaming</span></td>
+                <td>Visible / Custom Shell</td>
+                <td>
+                  <a href="#appointment" class="btn btn-secondary" style="font-size: 0.78rem; padding: 6px 12px;" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+                    <span>Enquire</span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Behind-the-Ear (BTE)</strong></td>
+                <td>Behind Ear with Mould/Tube</td>
+                <td>Mild to Profound</td>
+                <td><span class="table-badge-yes"><i data-lucide="check-circle-2"></i> Yes (Lithium-ion)</span></td>
+                <td><span class="table-badge-yes"><i data-lucide="check-circle-2"></i> Wireless Stream</span></td>
+                <td>Visible Behind Ear</td>
+                <td>
+                  <a href="#appointment" class="btn btn-secondary" style="font-size: 0.78rem; padding: 6px 12px;" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Trial And Fitting';">
+                    <span>Enquire</span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 11: PRICING & EMI INFORMATION
+         ========================================================================== -->
+    <section id="pricing" class="pricing-guide-section" aria-label="Hearing Aid Pricing Guide">
+      <div class="container">
+        <div class="text-center" style="max-width: 820px; margin: 0 auto;">
+          <span class="section-tag-badge">
+            <i data-lucide="tag"></i>
+            <span>Transparent Healthcare Guidance</span>
+          </span>
+          <h2 class="section-title">HEARING AID PRICING TIERS &amp; EMI OPTIONS</h2>
+          <p class="section-subtitle">
+            Hearing aid pricing in India varies based on digital signal processing capabilities, automated acoustic scene analyzers, channel counts, and rechargeable Bluetooth features.
+          </p>
+        </div>
+
+        <div class="pricing-cards-grid">
+          <!-- Tier 1: Essential -->
+          <div class="price-tier-card">
+            <h3 class="price-tier-title">Basic / Essential</h3>
+            <span class="price-tier-ideal">Ideal for quiet homes and 1-on-1 conversations</span>
+            <ul class="price-tier-features">
+              <li><i data-lucide="check"></i> 4 to 8 Digital Processing Channels</li>
+              <li><i data-lucide="check"></i> Basic feedback cancellation (eliminates whistling)</li>
+              <li><i data-lucide="check"></i> Manual program selection for quiet environments</li>
+              <li><i data-lucide="check"></i> Traditional battery-operated formats</li>
+              <li><i data-lucide="check"></i> Standard manufacturer warranty</li>
+            </ul>
+            <a href="https://wa.me/918618459344?text=Hi%20SoundBridge%2C%20please%20share%20price%20estimates%20for%20Essential%20Hearing%20Aids." target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full">
+              <span>Request Quote via WhatsApp</span>
+              <i data-lucide="message-circle"></i>
+            </a>
+          </div>
+
+          <!-- Tier 2: Mid-Range -->
+          <div class="price-tier-card featured-tier">
+            <span class="featured-tier-ribbon">Most Popular</span>
+            <h3 class="price-tier-title">Advanced / Mid-Range</h3>
+            <span class="price-tier-ideal">Ideal for family gatherings, television, and outdoors</span>
+            <ul class="price-tier-features">
+              <li><i data-lucide="check"></i> 12 to 24 Digital Processing Channels</li>
+              <li><i data-lucide="check"></i> Adaptive directional microphones for noise filtering</li>
+              <li><i data-lucide="check"></i> Rechargeable lithium-ion battery options</li>
+              <li><i data-lucide="check"></i> Direct Bluetooth streaming for iPhone &amp; Android</li>
+              <li><i data-lucide="check"></i> Tinnitus sound masking therapy included</li>
+              <li><i data-lucide="check"></i> 2-Year comprehensive warranty with lifetime tuning</li>
+            </ul>
+            <a href="https://wa.me/918618459344?text=Hi%20SoundBridge%2C%20please%20share%20price%20estimates%20for%20Advanced%20Mid-Range%20Hearing%20Aids." target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full">
+              <span>Request Quote via WhatsApp</span>
+              <i data-lucide="message-circle"></i>
+            </a>
+          </div>
+
+          <!-- Tier 3: Premium -->
+          <div class="price-tier-card">
+            <h3 class="price-tier-title">Premium / AI Flagship</h3>
+            <span class="price-tier-ideal">Ideal for restaurants, boardrooms, crowded gatherings</span>
+            <ul class="price-tier-features">
+              <li><i data-lucide="check"></i> 32 to 64+ Multi-Channel Sound Separation</li>
+              <li><i data-lucide="check"></i> Deep Neural Network (DNN) AI acoustic processing</li>
+              <li><i data-lucide="check"></i> 360° dynamic spatial speech tracking</li>
+              <li><i data-lucide="check"></i> Hands-free Bluetooth calls, Auracast broadcasting</li>
+              <li><i data-lucide="check"></i> Smart portable charging case with power bank</li>
+              <li><i data-lucide="check"></i> Up to 3-4 Years warranty with priority service</li>
+            </ul>
+            <a href="https://wa.me/918618459344?text=Hi%20SoundBridge%2C%20please%20share%20price%20estimates%20for%20Premium%20Flagship%20Hearing%20Aids." target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full">
+              <span>Request Quote via WhatsApp</span>
+              <i data-lucide="message-circle"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pricing Factors & EMI Panel -->
+        <div class="pricing-factors-panel">
+          <div class="pricing-factor-item">
+            <i data-lucide="credit-card"></i>
+            <div>
+              <h4>Easy EMI Financing</h4>
+              <p>Flexible equated monthly installment plans available on eligible cards and consumer finance partners, allowing you to invest in better hearing comfortably.</p>
+            </div>
+          </div>
+          <div class="pricing-factor-item">
+            <i data-lucide="cpu"></i>
+            <div>
+              <h4>Technology Level Determines Price</h4>
+              <p>Prices differ primarily by computational power, speech-in-noise processors, and automatic scene adaptation, rather than just the physical size of the device.</p>
+            </div>
+          </div>
+          <div class="pricing-factor-item">
+            <i data-lucide="shield-check"></i>
+            <div>
+              <h4>Transparent Quotations</h4>
+              <p>We provide itemized, written quotes following your clinical audiogram with zero hidden fitting charges and complimentary follow-up fine-tuning.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 12: BENEFITS OF MODERN HEARING AIDS
+         ========================================================================== -->
+    <section id="benefits" class="benefits-section" aria-label="Benefits of Modern Hearing Aids">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+          <span class="section-tag-badge">
+            <i data-lucide="sparkles"></i>
+            <span>Life-Changing Advantages</span>
+          </span>
+          <h2 class="section-title">BENEFITS OF MODERN HEARING AIDS</h2>
+          <p class="section-subtitle">
+            Today's digital hearing instruments are sophisticated microcomputers designed to seamlessly reintegrate you into social, family, and professional life.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon-box"><i data-lucide="message-circle"></i></div>
+            <h3 class="benefit-title">Improved Speech Clarity</h3>
+            <p class="benefit-desc">Accentuates consonant frequencies (s, t, p, k) so words are crystal-clear rather than just louder.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box"><i data-lucide="users"></i></div>
+            <h3 class="benefit-title">Effortless Communication</h3>
+            <p class="benefit-desc">Reduces the cognitive exhaustion of straining to lip-read and asking others to repeat during dinners and meetings.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box"><i data-lucide="heart"></i></div>
+            <h3 class="benefit-title">Reconnected Social Life</h3>
+            <p class="benefit-desc">Overcomes social withdrawal and depression by restoring confidence in group conversations and family moments.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box"><i data-lucide="music"></i></div>
+            <h3 class="benefit-title">Rich Listening Experience</h3>
+            <p class="benefit-desc">Enjoy full-spectrum natural acoustic fidelity for television, telephone conversations, music, and nature sounds.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box"><i data-lucide="bluetooth"></i></div>
+            <h3 class="benefit-title">Wireless Bluetooth Streaming</h3>
+            <p class="benefit-desc">Stream incoming phone calls, Zoom conferences, and YouTube directly into both ears like premium wireless earbuds.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box"><i data-lucide="battery-charging"></i></div>
+            <h3 class="benefit-title">Rechargeable Convenience</h3>
+            <p class="benefit-desc">No more fiddling with microscopic disposable batteries. Simple overnight charging keeps you powered throughout the day.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box"><i data-lucide="sliders"></i></div>
+            <h3 class="benefit-title">Personalized Sound Tuning</h3>
+            <p class="benefit-desc">Calibrated precisely to your individual audiogram curves with custom adjustments for your frequent listening environments.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box"><i data-lucide="shield-alert"></i></div>
+            <h3 class="benefit-title">Spatial Environmental Awareness</h3>
+            <p class="benefit-desc">Improves spatial safety by helping you instantly localize car horns, footsteps, doorbells, and approaching traffic.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 13: WHY CHOOSE SOUNDBRIDGE
+         ========================================================================== -->
+    <section id="why-soundbridge" class="why-choose-section" aria-label="Why Choose SoundBridge">
+      <div class="container">
+        <div class="why-choose-grid">
+          <div>
+            <span class="section-tag-badge">
+              <i data-lucide="check-circle-2"></i>
+              <span>Patient-Centric Excellence</span>
+            </span>
+            <h2 class="section-title">WHY PATIENTS TRUST SOUNDBRIDGE CLINIC</h2>
+            <p class="section-subtitle" style="margin-bottom: 28px;">
+              Located in Nagarbhavi, Bengaluru, SoundBridge combines advanced audiological science with unhurried clinical empathy.
+            </p>
+
+            <div class="why-points-list">
+              <div class="why-point-item">
+                <div class="why-point-icon"><i data-lucide="award"></i></div>
+                <div class="why-point-content">
+                  <h4>Qualified &amp; Certified Audiologists</h4>
+                  <p>All clinical diagnostic evaluations and instrument fittings are conducted by licensed speech &amp; hearing professionals.</p>
+                </div>
+              </div>
+
+              <div class="why-point-item">
+                <div class="why-point-icon"><i data-lucide="volume-2"></i></div>
+                <div class="why-point-content">
+                  <h4>Calibrated Soundproof Testing Chamber</h4>
+                  <p>Our dedicated acoustic audiometry booth ensures medical-grade accuracy during pure tone and speech audiometry tests.</p>
+                </div>
+              </div>
+
+              <div class="why-point-item">
+                <div class="why-point-icon"><i data-lucide="headphones"></i></div>
+                <div class="why-point-content">
+                  <h4>Multi-Brand Trials Before You Decide</h4>
+                  <p>Experience instruments from Signia, Phonak, Widex, ReSound, and Starkey side-by-side to find your acoustic preference.</p>
+                </div>
+              </div>
+
+              <div class="why-point-item">
+                <div class="why-point-icon"><i data-lucide="message-circle"></i></div>
+                <div class="why-point-content">
+                  <h4>Integrated Speech Pathology Services</h4>
+                  <p>Dedicated speech therapy and pediatric development programs for stammering, articulation, and language delays.</p>
+                </div>
+              </div>
+
+              <div class="why-point-item">
+                <div class="why-point-icon"><i data-lucide="wrench"></i></div>
+                <div class="why-point-content">
+                  <h4>Lifetime Aftercare &amp; Fine-Tuning Support</h4>
+                  <p>We provide ongoing sound adjustments, preventive maintenance, ear mould cleanings, and software updates.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="why-image-card">
+              <img src="assets/images/clinic-testing-booth.jpg" alt="Audiologist at SoundBridge Testing Console" loading="lazy">
+              <div class="why-image-badge">
+                <i data-lucide="map-pin"></i>
+                <span>SoundBridge Speech &amp; Hearing Clinic • Nagarbhavi, Bengaluru</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 15: HEARING AID REPAIR & AFTER-SALES SUPPORT
+         ========================================================================== -->
+    <section id="repair" class="repair-service-section" aria-label="Hearing Aid Repair and Maintenance">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+          <span class="section-tag-badge">
+            <i data-lucide="wrench"></i>
+            <span>Care &amp; Restoration</span>
+          </span>
+          <h2 class="section-title">HEARING AID REPAIR &amp; AFTER-SALES SERVICE</h2>
+          <p class="section-subtitle">
+            Keep your hearing instruments performing like new. Our clinic provides prompt diagnostic troubleshooting, professional cleaning, and manufacturer repair coordination.
+          </p>
+        </div>
+
+        <div class="repair-cards-grid">
+          <div class="repair-card">
+            <div class="repair-card-icon"><i data-lucide="sparkles"></i></div>
+            <h3 class="repair-card-title">Ultrasonic Deep Cleaning</h3>
+            <p class="repair-card-desc">Removes accumulated earwax, skin oils, and dust clogging microphone ports and acoustic receiver canals.</p>
+            <a href="#appointment" class="btn btn-secondary" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Repair and Maintenance';">
+              <span>Book Cleaning</span>
+            </a>
+          </div>
+
+          <div class="repair-card">
+            <div class="repair-card-icon"><i data-lucide="battery"></i></div>
+            <h3 class="repair-card-title">Battery &amp; Charging Diagnostics</h3>
+            <p class="repair-card-desc">Troubleshooting rechargeable lithium batteries, dock contacts, and supplying fresh high-drain zinc-air batteries.</p>
+            <a href="#appointment" class="btn btn-secondary" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Repair and Maintenance';">
+              <span>Check Battery</span>
+            </a>
+          </div>
+
+          <div class="repair-card">
+            <div class="repair-card-icon"><i data-lucide="volume-2"></i></div>
+            <h3 class="repair-card-title">Sound Quality &amp; Feedback Fix</h3>
+            <p class="repair-card-desc">Resolves whistling, intermittent cut-outs, distorted audio, and crackling sounds through acoustic recalibration.</p>
+            <a href="#appointment" class="btn btn-secondary" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Fine Tuning';">
+              <span>Fix Sound</span>
+            </a>
+          </div>
+
+          <div class="repair-card">
+            <div class="repair-card-icon"><i data-lucide="bluetooth"></i></div>
+            <h3 class="repair-card-title">Bluetooth &amp; App Pairing</h3>
+            <p class="repair-card-desc">Assisting with firmware updates, smartphone app setup, and repairing pairing between hearing aids and television streamers.</p>
+            <a href="#appointment" class="btn btn-secondary" onclick="if(document.getElementById('appointment-service')) document.getElementById('appointment-service').value='Hearing Aid Repair and Maintenance';">
+              <span>Pair Device</span>
             </a>
           </div>
         </div>
@@ -1122,6 +2279,222 @@
     <!-- ==========================================================================
          CLINIC LOCATION & ACCESSIBILITY SECTION
          ========================================================================== -->
+    
+    <!-- ==========================================================================
+         SECTION 18: FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION)
+         ========================================================================== -->
+    <section id="faq" class="faq-section" aria-label="Frequently Asked Questions">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+          <span class="section-tag-badge">
+            <i data-lucide="help-circle"></i>
+            <span>Patient Guidance</span>
+          </span>
+          <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+          <p class="section-subtitle">
+            Answers to common questions about hearing evaluations, hearing aid technologies, trials, and speech therapy at SoundBridge Clinic.
+          </p>
+        </div>
+
+        <div class="faq-accordion-container">
+          <!-- Q1 -->
+          <div class="faq-item active">
+            <button type="button" class="faq-trigger" aria-expanded="true">
+              <span>1. What are the early signs of hearing loss?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer" style="max-height: 200px;">
+              <div class="faq-content-inner">
+                Early signs include frequently asking family members to repeat themselves, turning the TV or radio louder than others prefer, struggling to understand speech in noisy restaurants, feeling like people are mumbling, and experiencing constant ringing or buzzing in the ears (tinnitus).
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>2. When should I get a professional hearing test?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer">
+              <div class="faq-content-inner">
+                You should get tested whenever you or your loved ones notice difficulty following everyday conversations, after experiencing sudden acoustic trauma or ear infections, or routinely every 1–2 years if you are over 50 years of age.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>3. Is a hearing test painful or uncomfortable?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer">
+              <div class="faq-content-inner">
+                No, hearing evaluations are completely non-invasive, painless, and comfortable. You will simply sit inside our quiet, sound-treated chamber wearing calibrated headphones and respond whenever you perceive soft auditory tones.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>4. How long does a full hearing evaluation take?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer">
+              <div class="faq-content-inner">
+                A thorough Pure Tone and Speech Audiometry assessment typically takes approximately 30 to 45 minutes, including an unhurried consultation with our audiologist to explain your audiogram results in clear, everyday terms.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>5. Which hearing aid style is best for me?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer">
+              <div class="faq-content-inner">
+                The ideal device depends entirely on your exact hearing loss severity, ear canal shape, lifestyle requirements (office, retirement, active sports), and budget. During your appointment, we provide live in-clinic demonstrations of suitable options.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>6. What is the difference between BTE and RIC hearing aids?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer">
+              <div class="faq-content-inner">
+                In Behind-the-Ear (BTE) devices, the acoustic speaker is housed inside the main casing behind the ear and sound travels through a tube. In Receiver-in-Canal (RIC) models, the speaker rests directly inside the ear canal, providing a more open, natural sound and a more discreet profile.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>7. Are invisible hearing aids available at SoundBridge?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer">
+              <div class="faq-content-inner">
+                Yes. We offer custom-cast Invisible-in-Canal (IIC) and Completely-in-Canal (CIC) hearing aids that sit deeply within the canal, making them virtually undetectable to onlookers.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q8 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>8. Are rechargeable hearing aids better than battery-operated ones?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer">
+              <div class="faq-content-inner">
+                Rechargeable instruments are extremely popular because they eliminate the need to purchase and change tiny disposable batteries. A single overnight charge provides 24–30 hours of continuous use, which is especially helpful for seniors.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q9 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>9. Can hearing aids connect to smartphones and televisions?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer">
+              <div class="faq-content-inner">
+                Yes. Modern Bluetooth hearing aids connect directly with iPhone, iPad, and Android smartphones for hands-free phone calls, music, and GPS directions. Dedicated TV audio streamers also deliver television dialogue directly into your hearing aids.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q10 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>10. How often should hearing aids be serviced or fine-tuned?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer">
+              <div class="faq-content-inner">
+                We recommend visiting SoundBridge every 4 to 6 months for professional ultrasonic cleaning, wax-filter replacements, and sound recalibration as your auditory perception adjusts to new listening environments.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q11 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>11. Can children and toddlers undergo hearing tests?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer">
+              <div class="faq-content-inner">
+                Yes. We offer specialized pediatric hearing assessment protocols tailored to age and developmental stage, creating a gentle and welcoming experience for infants and young children.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q12 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>12. Do you provide professional Speech Therapy?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer">
+              <div class="faq-content-inner">
+                Yes. SoundBridge features dedicated speech and language therapy programs for children and adults experiencing stammering, articulation issues, developmental speech delays, and voice disorders.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q13 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>13. Can older or malfunctioning hearing aids be repaired?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer">
+              <div class="faq-content-inner">
+                Yes. Our clinic provides diagnostic troubleshooting, acoustic receiver replacements, battery contact servicing, and coordinate authorized manufacturer repairs for major brands.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q14 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>14. How can I book an appointment with an Audiologist?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer">
+              <div class="faq-content-inner">
+                You can easily book online via our appointment booking form, connect with us on WhatsApp at +91 8618459344, or call our clinic directly at +91 8618459344.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q15 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>15. Where is SoundBridge Clinic located?</span>
+              <i data-lucide="chevron-down" class="faq-icon-arrow"></i>
+            </button>
+            <div class="faq-content-drawer">
+              <div class="faq-content-inner">
+                SoundBridge Speech &amp; Hearing Clinic is located at 1st Floor 2249, Sri Anantha Kausthubha, 1st Main Road, near Muddinapalya Road, D-Group Layout, Gidadakonenahalli, Nagarbhavi, Bengaluru, Karnataka – 560091.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="location" class="location-section" aria-label="Clinic Location">
       <div class="container">
         <div class="location-grid">
@@ -1198,6 +2571,7 @@
 
           <!-- Booking Form -->
           <form id="appointment-form" class="booking-form" novalidate>
+            <!-- Row 1: Name & Mobile -->
             <div class="form-row-2">
               <div class="form-group">
                 <label for="patient-name" class="form-label">Full Name *</label>
@@ -1206,44 +2580,86 @@
               </div>
 
               <div class="form-group">
-                <label for="patient-phone" class="form-label">Phone Number *</label>
+                <label for="patient-phone" class="form-label">Mobile Number * (10 Digits)</label>
                 <input type="tel" id="patient-phone" class="form-input" placeholder="+91 98765 43210" required>
-                <span class="form-error-msg">Please enter a valid phone number.</span>
+                <span class="form-error-msg">Please enter a valid 10-digit mobile number.</span>
               </div>
             </div>
 
+            <!-- Row 2: Age & City -->
             <div class="form-row-2">
               <div class="form-group">
-                <label for="appointment-service" class="form-label">Service of Interest *</label>
+                <label for="patient-age" class="form-label">Age (Years)</label>
+                <input type="number" id="patient-age" class="form-input" placeholder="e.g. 45" min="1" max="115">
+              </div>
+
+              <div class="form-group">
+                <label for="patient-city" class="form-label">City / Locality</label>
+                <input type="text" id="patient-city" class="form-input" placeholder="e.g. Nagarbhavi, Bengaluru" value="Bengaluru">
+              </div>
+            </div>
+
+            <!-- Row 3: Service Required -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="appointment-service" class="form-label">Service Required *</label>
                 <select id="appointment-service" class="form-select" required>
                   <option value="" disabled selected>Select a clinical service...</option>
                   <option value="Hearing Consultation">Hearing Consultation</option>
-                  <option value="Hearing Test For Kids And Adults">Hearing Test For Kids And Adults</option>
-                  <option value="Hearing Aid Trial And Fitting">Hearing Aid Trial And Fitting</option>
-                  <option value="Hearing Aid Accessories">Hearing Aid Accessories</option>
-                  <option value="Hearing Aid Repair and Maintenance">Hearing Aid Repair and Maintenance</option>
-                  <option value="Hearing Aid Fine Tuning">Hearing Aid Fine Tuning</option>
-                  <option value="Speech and language evaluation">Speech and language evaluation</option>
+                  <option value="Hearing Test">Hearing Test (PTA &amp; Speech)</option>
+                  <option value="Pediatric Hearing Assessment">Pediatric Hearing Assessment</option>
+                  <option value="Hearing Aid Trial">Hearing Aid Trial</option>
+                  <option value="Hearing Aid Fitting">Hearing Aid Fitting</option>
+                  <option value="Hearing Aid Repair">Hearing Aid Repair</option>
+                  <option value="Hearing Aid Fine-Tuning">Hearing Aid Fine-Tuning</option>
+                  <option value="Speech and Language Evaluation">Speech and Language Evaluation</option>
                   <option value="Speech Therapy">Speech Therapy</option>
+                  <option value="Other">Other Hearing / Speech Care</option>
                 </select>
                 <span class="form-error-msg">Please select a service.</span>
               </div>
 
               <div class="form-group">
-                <label for="appointment-date" class="form-label">Preferred Date &amp; Time (Mon-Sat, 10am-7pm)</label>
-                <input type="text" id="appointment-date" class="form-input" placeholder="e.g. Tomorrow at 11:00 AM">
+                <label for="patient-hearing-problem" class="form-label">Hearing Problem / Symptoms</label>
+                <select id="patient-hearing-problem" class="form-select">
+                  <option value="Unspecified">Select primary concern...</option>
+                  <option value="Difficulty understanding speech in conversations">Difficulty understanding speech in conversations</option>
+                  <option value="Tinnitus / Ringing in ears">Tinnitus / Ringing in ears</option>
+                  <option value="Age-related gradual hearing decline">Age-related gradual hearing decline</option>
+                  <option value="High TV / telephone volume required">High TV / telephone volume required</option>
+                  <option value="Speech delay or articulation in child">Speech delay or articulation in child</option>
+                  <option value="Hearing aid battery / service issue">Hearing aid battery / service issue</option>
+                  <option value="Routine preventative check-up">Routine preventative check-up</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Row 4: Date & Time -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="appointment-date" class="form-label">Preferred Date</label>
+                <input type="date" id="appointment-date" class="form-input">
+              </div>
+
+              <div class="form-group">
+                <label for="appointment-time" class="form-label">Preferred Time (Mon–Sat, 10am–7pm)</label>
+                <select id="appointment-time" class="form-select">
+                  <option value="Morning (10:00 AM - 1:00 PM)">Morning (10:00 AM - 1:00 PM)</option>
+                  <option value="Afternoon (1:00 PM - 4:00 PM)">Afternoon (1:00 PM - 4:00 PM)</option>
+                  <option value="Evening (4:00 PM - 7:00 PM)" selected>Evening (4:00 PM - 7:00 PM)</option>
+                </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="patient-notes" class="form-label">Message / Hearing Symptoms (Optional)</label>
-              <textarea id="patient-notes" class="form-textarea" placeholder="Briefly describe what you are experiencing or any questions you have..."></textarea>
+              <label for="patient-notes" class="form-label">Additional Message / Hearing History (Optional)</label>
+              <textarea id="patient-notes" class="form-textarea" placeholder="Briefly describe what you are experiencing, previous hearing aid models (if any), or specific questions for the audiologist..."></textarea>
             </div>
 
             <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-top: 12px;">
               <div style="display: flex; align-items: center; gap: 10px; font-size: 0.82rem; color: var(--text-muted);">
                 <i data-lucide="shield-check" style="color: var(--accent-cyan);"></i>
-                <span>Direct WhatsApp booking &bull; Your details are strictly confidential.</span>
+                <span>Direct WhatsApp booking &bull; Appointment is confirmed after clinic verification.</span>
               </div>
 
               <button type="submit" class="btn btn-primary btn-lg" id="appointment-submit-btn">
@@ -1412,12 +2828,14 @@
           <ul class="footer-links-list">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About SoundBridge</a></li>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#solutions">Hearing Solutions</a></li>
-            <li><a href="#journey">The Sound Journey</a></li>
+            <li><a href="#hearing-problems">Hearing Problems</a></li>
+            <li><a href="#services">Clinical Services</a></li>
+            <li><a href="#hearing-aids">Hearing Aid Styles</a></li>
+            <li><a href="#brands">Global Brands</a></li>
+            <li><a href="#pricing">Pricing &amp; EMI</a></li>
+            <li><a href="#benefits">Patient Benefits</a></li>
             <li><a href="#reviews">Patient Reviews</a></li>
-            <li><a href="#gallery">Clinic Gallery</a></li>
-            <li><a href="#location">Clinic Location</a></li>
+            <li><a href="#faq">FAQs</a></li>
             <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
@@ -1455,10 +2873,10 @@
       <!-- Bottom Bar -->
       <div class="footer-bottom-bar">
         <div>
-          © 2026 SoundBridge Speech and Hearing Clinic. All rights reserved.
+          © 2026 SoundBridge Speech and Hearing Clinic. All rights reserved. | <a href="#privacy" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a> | <a href="#terms" style="color: var(--text-muted); text-decoration: none;">Terms &amp; Conditions</a>
         </div>
         <div style="display: flex; align-items: center; gap: 20px;">
-          <span>Speech &amp; Hearing Specialist • Bengaluru</span>
+          <span>Premier Speech &amp; Hearing Specialist • Nagarbhavi, Bengaluru</span>
           <button type="button" class="back-to-top-btn" aria-label="Back to top">
             <i data-lucide="arrow-up"></i>
           </button>

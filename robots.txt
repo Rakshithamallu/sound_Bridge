@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rakshithamallu.github.io/sound_Bridge/sitemap.xml

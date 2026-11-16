@@ -374,19 +374,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameVal = nameInput.value.trim();
     const phoneVal = phoneInput.value.trim();
     const serviceVal = serviceInput.value;
-    const dateVal = dateInput?.value.trim() || 'Flexible / As per schedule';
+    const ageVal = document.getElementById('patient-age')?.value.trim() || 'Not specified';
+    const cityVal = document.getElementById('patient-city')?.value.trim() || 'Bengaluru';
+    const symptomVal = document.getElementById('patient-hearing-problem')?.value || 'Unspecified';
+    const dateVal = dateInput?.value || 'Flexible / Next Available';
+    const timeVal = document.getElementById('appointment-time')?.value || 'Flexible';
     const notesVal = notesInput?.value.trim() || 'None';
 
-    // WhatsApp Message Format
+    // WhatsApp Message Format (Full 9-field transmission)
     const clinicPhone = '918618459344';
     const waText =
-      `New Appointment Request — SoundBridge Clinic\n` +
-      ` Name: ${nameVal}\n` +
-      ` Phone: ${phoneVal}\n` +
-      ` Service: ${serviceVal}\n` +
-      ` Preferred Date & Time: ${dateVal}\n` +
-      ` Message / Symptoms: ${notesVal}\n\n` +
-      `_Sent from SoundBridge Speech & Hearing Clinic Website_`;
+      `*SoundBridge Clinic — New Appointment Request*\n` +
+      `-------------------------------------------\n` +
+      `*Patient Name:* ${nameVal}\n` +
+      `*Mobile:* ${phoneVal}\n` +
+      `*Age:* ${ageVal}\n` +
+      `*City / Area:* ${cityVal}\n` +
+      `*Service Required:* ${serviceVal}\n` +
+      `*Primary Concern:* ${symptomVal}\n` +
+      `*Preferred Date:* ${dateVal}\n` +
+      `*Preferred Slot:* ${timeVal}\n` +
+      `*Notes / History:* ${notesVal}\n` +
+      `-------------------------------------------\n` +
+      `_Sent from SoundBridge Speech & Hearing Clinic Official Portal_`;
 
     const whatsappUrl = `https://wa.me/${clinicPhone}?text=${encodeURIComponent(waText)}`;
 
@@ -464,6 +474,56 @@ document.addEventListener('DOMContentLoaded', () => {
   const backToTopBtn = document.querySelector('.back-to-top-btn');
   backToTopBtn?.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+
+  // 11. Hearing Aid Product Catalog Filter Logic
+  const filterBtns = document.querySelectorAll('.catalog-filter-btn');
+  const productCards = document.querySelectorAll('.product-style-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      productCards.forEach(card => {
+        const categories = (card.getAttribute('data-category') || '').split(',');
+        if (filterValue === 'all' || categories.includes(filterValue)) {
+          card.style.display = 'flex';
+          card.style.animation = 'fadeInCard 0.4s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // 12. Interactive FAQ Accordion Logic
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const trigger = item.querySelector('.faq-trigger');
+    const drawer = item.querySelector('.faq-content-drawer');
+
+    trigger?.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+
+      // Close all other items for clean accordion UX
+      faqItems.forEach(other => {
+        other.classList.remove('active');
+        const otherTrigger = other.querySelector('.faq-trigger');
+        const otherDrawer = other.querySelector('.faq-content-drawer');
+        if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+        if (otherDrawer) otherDrawer.style.maxHeight = null;
+      });
+
+      if (!isOpen && drawer) {
+        item.classList.add('active');
+        trigger.setAttribute('aria-expanded', 'true');
+        drawer.style.maxHeight = drawer.scrollHeight + 'px';
+      }
+    });
   });
 
   // Floating appointment button auto-focus
