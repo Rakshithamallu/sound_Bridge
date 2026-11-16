@@ -12,3 +12,7 @@ desktop.ini
 # Editor configs
 .vscode/
 .idea/
+
+# Scratch directory
+scratch/
+
