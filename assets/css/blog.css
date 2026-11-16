@@ -9,7 +9,7 @@
    -------------------------------------------------------------------------- */
 .blog-hero-section {
   position: relative;
-  padding: 130px 0 60px;
+  padding: 120px 0 28px;
   background: radial-gradient(circle at 50% 0%, rgba(125, 217, 234, 0.12) 0%, rgba(7, 21, 33, 0) 70%), var(--bg-primary);
   border-bottom: 1px solid rgba(125, 217, 234, 0.14);
   text-align: center;
@@ -48,15 +48,16 @@
 }
 
 .blog-search-box {
-  position: relative;
+  position: relative !important;
   max-width: 520px;
   margin: 0 auto;
   width: 100%;
+  display: block;
 }
 
 .blog-search-box input {
   width: 100%;
-  padding: 14px 20px 14px 48px;
+  padding: 14px 20px 14px 52px !important;
   background: rgba(13, 37, 53, 0.85);
   border: 1px solid rgba(125, 217, 234, 0.25);
   border-radius: var(--radius-full);
@@ -64,6 +65,7 @@
   font-size: 0.95rem;
   outline: none;
   transition: all var(--transition-fast);
+  box-sizing: border-box;
 }
 
 .blog-search-box input:focus {
@@ -72,15 +74,18 @@
   background: rgba(17, 46, 69, 0.95);
 }
 
-.blog-search-box i {
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--accent-cyan);
-  width: 20px;
-  height: 20px;
-  pointer-events: none;
+.blog-search-box i,
+.blog-search-box svg {
+  position: absolute !important;
+  left: 18px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  color: var(--accent-cyan) !important;
+  width: 20px !important;
+  height: 20px !important;
+  pointer-events: none !important;
+  margin: 0 !important;
+  z-index: 2;
 }
 
 .blog-categories-pills {
@@ -125,7 +130,7 @@
    FEATURED ARTICLE HERO CARD
    -------------------------------------------------------------------------- */
 .blog-content-container {
-  padding: 60px 0 100px;
+  padding: 30px 0 90px;
 }
 
 .featured-article-card {

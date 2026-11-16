@@ -616,6 +616,7 @@
       const headingTitle = document.getElementById('articles-heading-title');
       const emptyState = document.getElementById('blog-empty-state');
       const resetBtn = document.getElementById('reset-filter-btn');
+      const featuredCard = document.getElementById('featured-article-card');
 
       if (!articlesGrid || typeof SOUNDBRIDGE_BLOG_ARTICLES === 'undefined') return;
 
@@ -636,6 +637,15 @@
         });
 
         countBadge.textContent = `Showing ${filtered.length} Article${filtered.length === 1 ? '' : 's'}`;
+
+        // Hide featured card when filtering so category articles appear immediately after the buttons
+        if (featuredCard) {
+          if (currentCategory !== 'all' || currentQuery.trim() !== '') {
+            featuredCard.style.display = 'none';
+          } else {
+            featuredCard.style.display = 'grid';
+          }
+        }
 
         if (currentCategory === 'all') {
           headingTitle.textContent = currentQuery ? `Search Results for "${currentQuery}"` : 'All Clinical Articles & Patient Guides';
@@ -682,13 +692,21 @@
       // Initial Render
       renderArticles();
 
-      // Category filter clicks
+      // Category filter clicks — immediately show related articles right after the button
       categoryButtons.forEach(btn => {
         btn.addEventListener('click', () => {
           categoryButtons.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
           currentCategory = btn.getAttribute('data-category');
           renderArticles();
+
+          // Scroll to the articles grid area so articles are in direct view right below the buttons
+          const contentArea = document.querySelector('.blog-content-container');
+          if (contentArea) {
+            const yOffset = -90;
+            const y = contentArea.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
         });
       });
 
