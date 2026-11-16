@@ -1075,22 +1075,224 @@
   display: none;
 }
 
-/* Related Articles / You May Also Like */
+/* Related Articles / You May Also Like - Compact 3-Column Layout */
 .related-articles-section {
-  padding: 70px 0;
+  padding: 55px 0 65px;
   border-top: 1px solid rgba(125, 217, 234, 0.15);
-  background: rgba(7, 21, 33, 0.4);
+  background: rgba(7, 21, 33, 0.45);
 }
 
 .related-header {
-  margin-bottom: 36px;
+  margin-bottom: 32px;
   text-align: center;
 }
 
+.related-header .section-tag-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  background: rgba(125, 217, 234, 0.12);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(125, 217, 234, 0.25);
+  border-radius: 9999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.related-header .section-title,
 .related-header h2 {
-  font-size: 2rem;
+  font-size: 1.85rem;
   font-weight: 800;
   color: var(--text-primary);
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+
+.related-header .section-subtitle,
+.related-header p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 3-Column Horizontal Line Grid with generous spacing */
+.related-articles-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 28px !important; /* Balanced 2-space gap between cards */
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* Compact, smaller card size specifically for related articles */
+.related-articles-grid .blog-card {
+  display: flex !important;
+  flex-direction: column !important;
+  background: rgba(13, 37, 53, 0.6) !important;
+  border: 1px solid rgba(125, 217, 234, 0.18) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+  height: 100% !important;
+}
+
+.related-articles-grid .blog-card:hover {
+  transform: translateY(-4px) !important;
+  border-color: rgba(125, 217, 234, 0.45) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45), 0 0 16px rgba(125, 217, 234, 0.15) !important;
+}
+
+.related-articles-grid .blog-card-media {
+  position: relative !important;
+  height: 155px !important; /* Compact, smaller image size */
+  width: 100% !important;
+  overflow: hidden !important;
+  background: rgba(13, 37, 53, 0.9) !important;
+}
+
+.related-articles-grid .blog-card-media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.35s ease !important;
+}
+
+.related-articles-grid .blog-card:hover .blog-card-media img {
+  transform: scale(1.05) !important;
+}
+
+.related-articles-grid .blog-card-category {
+  position: absolute !important;
+  top: 10px !important;
+  left: 10px !important;
+  background: rgba(7, 21, 33, 0.9) !important;
+  color: var(--accent-cyan) !important;
+  border: 1px solid rgba(125, 217, 234, 0.3) !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  padding: 2px 8px !important;
+  border-radius: 9999px !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+.related-articles-grid .blog-card-content,
+.related-articles-grid .blog-card-body {
+  padding: 16px 18px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
+
+.related-articles-grid .blog-card-meta {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  font-size: 0.72rem !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 8px !important;
+}
+
+.related-articles-grid .blog-card-meta span {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+.related-articles-grid .blog-card-meta svg,
+.related-articles-grid .blog-card-meta i {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.related-articles-grid .blog-card-title {
+  font-size: 0.98rem !important;
+  font-weight: 700 !important;
+  line-height: 1.38 !important;
+  color: var(--text-primary) !important;
+  margin: 0 0 8px 0 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  min-height: 2.76em !important;
+}
+
+.related-articles-grid .blog-card-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.related-articles-grid .blog-card:hover .blog-card-title a {
+  color: var(--accent-cyan) !important;
+}
+
+.related-articles-grid .blog-card-excerpt {
+  font-size: 0.8rem !important;
+  line-height: 1.5 !important;
+  color: var(--text-muted) !important;
+  margin: 0 0 14px 0 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  flex-grow: 1 !important;
+}
+
+.related-articles-grid .blog-card-footer {
+  margin-top: auto !important;
+  padding-top: 12px !important;
+  border-top: 1px solid rgba(125, 217, 234, 0.12) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.related-articles-grid .blog-read-more-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  color: var(--accent-cyan) !important;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, color 0.2s ease !important;
+}
+
+.related-articles-grid .blog-read-more-btn svg,
+.related-articles-grid .blog-read-more-btn i {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.related-articles-grid .blog-card:hover .blog-read-more-btn {
+  transform: translateX(3px) !important;
+  color: #38BDF8 !important;
+}
+
+@media (max-width: 991px) {
+  .related-articles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .related-articles-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .related-articles-grid .blog-card-media {
+    height: 160px !important;
+  }
 }
 
 .back-to-blog-bar {
