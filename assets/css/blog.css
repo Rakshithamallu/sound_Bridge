@@ -780,35 +780,115 @@
 /* End of Article CTA Section */
 .article-cta-card {
   margin-top: 56px;
-  padding: 36px 40px;
+  padding: 38px 32px;
   background: radial-gradient(circle at 100% 0%, rgba(125, 217, 234, 0.18) 0%, rgba(13, 37, 53, 0.85) 60%);
   border: 1px solid rgba(125, 217, 234, 0.35);
   border-radius: var(--radius-lg);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), var(--glow-cyan-sm);
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .article-cta-card h3 {
-  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
   font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 10px;
+  letter-spacing: -0.01em;
 }
 
 .article-cta-card p {
-  font-size: 1rem;
+  font-size: 0.98rem;
   color: var(--text-secondary);
   max-width: 620px;
-  margin: 0 auto 24px;
+  margin: 0 auto 26px;
   line-height: 1.65;
 }
 
+/* Horizontal 3-Column Actions Layout */
 .article-cta-actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  max-width: 760px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.article-cta-actions .btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 13px 10px !important;
+  font-size: clamp(0.78rem, 1.02vw, 0.92rem) !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  border-radius: var(--radius-full) !important;
+  text-decoration: none !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  transition: all var(--transition-fast) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+}
+
+.article-cta-actions .btn i {
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0 !important;
+}
+
+.article-cta-actions .btn:hover {
+  transform: translateY(-2px);
+}
+
+.article-cta-actions .btn-primary {
+  background: linear-gradient(135deg, #7DD9EA 0%, #38BDF8 100%) !important;
+  color: #071521 !important;
+  border: 1px solid #7DD9EA !important;
+  box-shadow: 0 4px 18px rgba(125, 217, 234, 0.42) !important;
+}
+
+.article-cta-actions .btn-primary:hover {
+  box-shadow: 0 6px 26px rgba(125, 217, 234, 0.7) !important;
+  background: linear-gradient(135deg, #9ae4f1 0%, #60a5fa 100%) !important;
+  color: #040e17 !important;
+}
+
+.article-cta-actions .btn-secondary,
+.article-cta-actions .btn-outline {
+  background: rgba(13, 37, 53, 0.85) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(125, 217, 234, 0.5) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+}
+
+.article-cta-actions .btn-secondary:hover,
+.article-cta-actions .btn-outline:hover {
+  background: rgba(125, 217, 234, 0.2) !important;
+  border-color: var(--accent-cyan) !important;
+  color: var(--accent-cyan) !important;
+  box-shadow: 0 4px 18px rgba(125, 217, 234, 0.35) !important;
+}
+
+.article-cta-actions .btn-whatsapp {
+  background: #25D366 !important;
+  color: #ffffff !important;
+  border: 1px solid #25D366 !important;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.38) !important;
+}
+
+.article-cta-actions .btn-whatsapp:hover {
+  background: #20ba59 !important;
+  border-color: #20ba59 !important;
+  box-shadow: 0 6px 26px rgba(37, 211, 102, 0.6) !important;
+  color: #ffffff !important;
+}
+
+.cta-label-short {
+  display: none;
 }
 
 /* Related Articles / You May Also Like */
@@ -898,21 +978,52 @@
   }
 
   .article-cta-card {
-    padding: 28px 20px;
+    padding: 28px 16px;
   }
 
   .article-cta-actions {
-    flex-direction: column;
-    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
   }
 
   .article-cta-actions .btn {
-    width: 100%;
-    justify-content: center;
+    padding: 11px 6px !important;
+    font-size: 0.8rem !important;
+    gap: 6px !important;
   }
 }
 
 @media (max-width: 580px) {
+  .article-cta-card {
+    padding: 22px 12px;
+  }
+
+  .article-cta-actions {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+  }
+
+  .article-cta-actions .btn {
+    padding: 10px 4px !important;
+    font-size: 0.74rem !important;
+    gap: 4px !important;
+  }
+
+  .article-cta-actions .btn i {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .cta-label-full {
+    display: none !important;
+  }
+
+  .cta-label-short {
+    display: inline !important;
+  }
   .category-pill-btn {
     padding: 6px 14px;
     font-size: 0.78rem;
@@ -945,3 +1056,4 @@
     justify-content: flex-start;
   }
 }
+
