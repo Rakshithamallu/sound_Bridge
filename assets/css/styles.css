@@ -280,22 +280,22 @@ section[id] {
 }
 
 .site-nav-wrapper .container.nav-container {
-  max-width: 1520px;
+  max-width: 1540px;
   width: 96%;
   padding-left: 12px;
   padding-right: 12px;
 }
 
 .site-nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
   gap: 16px;
-  padding: 8px 16px;
-  min-height: 60px;
+  padding: 6px 12px 6px 18px;
+  min-height: 58px;
   border-radius: var(--radius-full);
-  background: rgba(7, 21, 33, 0.85);
-  border: 1px solid rgba(125, 217, 234, 0.16);
+  background: rgba(7, 21, 33, 0.88);
+  border: 1px solid rgba(125, 217, 234, 0.22);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45);
@@ -305,13 +305,13 @@ section[id] {
 }
 .site-nav-wrapper.scrolled .site-nav {
   background: var(--bg-glass-nav);
-  border-color: rgba(125, 217, 234, 0.22);
+  border-color: rgba(125, 217, 234, 0.28);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
 }
 
 /* Logo */
 .nav-brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   text-decoration: none;
@@ -322,14 +322,14 @@ section[id] {
   transition: opacity 0.2s ease;
   flex-shrink: 0;
   white-space: nowrap;
-  margin-right: 0;
+  justify-self: start;
 }
 .nav-brand:hover {
   opacity: 0.9;
 }
 .brand-logo-icon,
 .brand-logo-img {
-  height: 42px;
+  height: 40px;
   width: auto;
   max-width: 80px;
   object-fit: contain;
@@ -370,21 +370,21 @@ section[id] {
   align-items: center;
   justify-content: center;
   list-style: none;
-  gap: 4px;
-  margin: 0 auto;
+  gap: 3px;
+  margin: 0;
   padding: 0;
-  flex-shrink: 1;
+  justify-self: center;
 }
 .nav-link {
   position: relative;
   text-decoration: none;
   color: var(--text-muted);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  padding: 6px 10px;
+  padding: 6px 9px;
   border-radius: var(--radius-full);
   white-space: nowrap;
-  line-height: 1.4;
+  line-height: 1.2;
   transition: color var(--transition-fast), background var(--transition-fast);
   display: inline-flex;
   align-items: center;
@@ -410,10 +410,11 @@ section[id] {
 
 /* Nav Actions — Anchored cleanly on the far right */
 .nav-actions {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
+  justify-self: end;
   margin-left: 0;
 }
 
@@ -557,25 +558,27 @@ section[id] {
 .nav-call-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: 7px;
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.81rem;
   font-weight: 600;
-  padding: 7px 14px;
+  padding: 8px 14px;
   border-radius: var(--radius-full);
-  background: rgba(13, 37, 53, 0.6);
+  background: rgba(13, 37, 53, 0.7);
   border: 1px solid var(--border-subtle);
   transition: all var(--transition-fast);
   flex-shrink: 0;
   white-space: nowrap;
-  height: 38px;
+  height: 40px;
   box-sizing: border-box;
+  line-height: 1;
 }
 .nav-call-btn:hover {
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
-  background: rgba(125, 217, 234, 0.1);
+  background: rgba(125, 217, 234, 0.12);
 }
 .nav-call-btn i {
   color: var(--accent-cyan);
@@ -588,7 +591,7 @@ section[id] {
   flex-shrink: 0 !important;
   white-space: nowrap !important;
   padding: 8px 18px !important;
-  font-size: 0.84rem !important;
+  font-size: 0.83rem !important;
   font-weight: 700 !important;
   height: 40px !important;
   border-radius: var(--radius-full) !important;
@@ -598,6 +601,7 @@ section[id] {
   gap: 6px !important;
   box-shadow: 0 4px 18px rgba(125, 217, 234, 0.35) !important;
   box-sizing: border-box !important;
+  line-height: 1 !important;
 }
 .nav-appointment-btn i {
   width: 16px;
@@ -2951,6 +2955,9 @@ section[id] {
     display: inline-flex !important;
   }
   .site-nav {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
     padding: 8px 14px 8px 18px;
   }
   .nav-brand {
