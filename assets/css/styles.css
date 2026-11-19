@@ -3481,3 +3481,103 @@ section[id] {
     scroll-behavior: auto !important;
   }
 }
+
+/* ==========================================================================
+   PRIMARY LOCAL SEO KEYWORDS DISPLAY (NAGARBHAVI & BENGALURU)
+   ========================================================================== */
+.hero-local-keywords {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.local-keywords-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.local-keywords-label svg,
+.local-keywords-label i {
+  width: 14px;
+  height: 14px;
+}
+
+.local-keyword-pill {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(13, 37, 53, 0.65);
+  border: 1px solid rgba(125, 217, 234, 0.22);
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.local-keyword-pill:hover {
+  background: rgba(125, 217, 234, 0.16);
+  border-color: var(--accent-cyan);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.footer-seo-bar {
+  margin-top: 36px;
+  padding: 18px 20px;
+  background: rgba(13, 37, 53, 0.45);
+  border: 1px solid rgba(125, 217, 234, 0.15);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.footer-seo-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.footer-seo-tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-seo-tag {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-seo-tag:hover {
+  color: var(--accent-cyan);
+  text-decoration: underline;
+}
+
+.footer-seo-tags .sep {
+  color: rgba(125, 217, 234, 0.35);
+  font-size: 0.8rem;
+}
