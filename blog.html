@@ -9,9 +9,9 @@
   <!-- Primary Meta Tags -->
   <meta name="title" content="Hearing Health &amp; Wellness Blog | SoundBridge Speech &amp; Hearing Clinic">
   <meta name="description"
-    content="Explore expert audiology articles, hearing aid advice, pediatric speech development guidance, and hearing test tips from licensed audiologists in Nagarbhavi, Bengaluru.">
+    content="Expert hearing health insights from SoundBridge—your premier audiology clinic in Nagarbhavi and trusted hearing aid clinic near me. Explore digital hearing aids, hearing test and trial near Nagarbhavi, and speech care.">
   <meta name="keywords"
-    content="Hearing clinic in Bengaluru, Hearing test in Bengaluru, Hearing aids in Bengaluru, Speech therapy in Bengaluru, Audiologist in Bengaluru, Children's hearing test, Hearing loss treatment, Hearing aid maintenance, Tinnitus treatment Bengaluru">
+    content="hearing aid clinic near me, audiology clinic in Nagarbhavi, hearing test and trial near Nagarbhavi, digital hearing aids, hearing aid center near Nagarbhavi, Hearing clinic in Bengaluru, Hearing test in Bengaluru, Hearing aids in Bengaluru, Speech therapy in Bengaluru, Audiologist in Bengaluru, Children's hearing test, Hearing loss treatment, Hearing aid maintenance, Tinnitus treatment Bengaluru">
   <meta name="author" content="SoundBridge Speech &amp; Hearing Clinic">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#030712">
@@ -22,7 +22,7 @@
   <meta property="og:url" content="https://rakshithamallu.github.io/sound_Bridge/blog.html">
   <meta property="og:title" content="Hearing Health &amp; Wellness Blog | SoundBridge Clinic Bengaluru">
   <meta property="og:description"
-    content="Explore expert insights, hearing care tips, speech development guidance, and the latest advancements in hearing technology in Bengaluru.">
+    content="Explore expert insights on digital hearing aids, hearing test and trial near Nagarbhavi, and audiology care from SoundBridge audiology clinic in Nagarbhavi.">
   <meta property="og:image"
     content="https://rakshithamallu.github.io/sound_Bridge/assets/images/clinic-consultation-room.jpg">
   <meta property="og:site_name" content="SoundBridge Speech &amp; Hearing Clinic">
@@ -33,7 +33,7 @@
   <meta property="twitter:url" content="https://rakshithamallu.github.io/sound_Bridge/blog.html">
   <meta property="twitter:title" content="Hearing Health &amp; Wellness Blog | SoundBridge Clinic Bengaluru">
   <meta property="twitter:description"
-    content="Explore expert insights, hearing care tips, speech development guidance, and the latest advancements in hearing technology in Bengaluru.">
+    content="Explore expert insights on digital hearing aids, hearing test and trial near Nagarbhavi, and audiology care from SoundBridge audiology clinic in Nagarbhavi.">
   <meta property="twitter:image"
     content="https://rakshithamallu.github.io/sound_Bridge/assets/images/clinic-consultation-room.jpg">
 
@@ -85,6 +85,7 @@
         "name": "SoundBridge Hearing Health & Wellness Blog",
         "description": "Expert audiology articles, hearing aid guides, tinnitus solutions, and pediatric speech therapy insights.",
         "url": "https://rakshithamallu.github.io/sound_Bridge/blog.html",
+        "keywords": "hearing aid clinic near me, audiology clinic in Nagarbhavi, hearing test and trial near Nagarbhavi, digital hearing aids, hearing aid center near Nagarbhavi, hearing clinic Bengaluru, audiologist Nagarbhavi",
         "publisher": {
           "@id": "https://rakshithamallu.github.io/sound_Bridge/#clinic"
         }
@@ -233,11 +234,11 @@
         <div class="blog-hero-header">
           <span class="section-tag-badge">
             <i data-lucide="book-open"></i>
-            <span>Clinical Audiology Insights &bull; SoundBridge Bengaluru</span>
+            <span>Clinical Audiology Insights &bull; SoundBridge Nagarbhavi, Bengaluru</span>
           </span>
           <h1 class="blog-hero-title">HEARING HEALTH &amp; WELLNESS</h1>
           <p class="blog-hero-sub">
-            Explore expert insights, hearing care tips, speech development guidance, and the latest advancements in hearing technology.
+            SoundBridge is your trusted <strong>audiology clinic in Nagarbhavi</strong> and premier <strong>hearing aid center near Nagarbhavi</strong>. Explore expert guidance on <strong>digital hearing aids</strong>, hearing protection, and schedule a professional <strong>hearing test and trial near Nagarbhavi</strong> at our top-rated <strong>hearing aid clinic near me</strong>.
           </p>
         </div>
 
@@ -247,6 +248,16 @@
             <i data-lucide="search"></i>
             <input type="text" id="blog-search-input" placeholder="Search by topic, symptom, or hearing aid style..."
               aria-label="Search blog articles">
+          </div>
+
+          <!-- Quick Topic Search Badges (Main Keywords) -->
+          <div class="blog-quick-keywords" aria-label="Popular search topics">
+            <span class="quick-keywords-label"><i data-lucide="sparkles"></i> Popular Topics:</span>
+            <button type="button" class="quick-keyword-tag" data-keyword="hearing aid clinic near me">hearing aid clinic near me</button>
+            <button type="button" class="quick-keyword-tag" data-keyword="audiology clinic in Nagarbhavi">audiology clinic in Nagarbhavi</button>
+            <button type="button" class="quick-keyword-tag" data-keyword="hearing test and trial near Nagarbhavi">hearing test and trial near Nagarbhavi</button>
+            <button type="button" class="quick-keyword-tag" data-keyword="digital hearing aids">digital hearing aids</button>
+            <button type="button" class="quick-keyword-tag" data-keyword="hearing aid center near Nagarbhavi">hearing aid center near Nagarbhavi</button>
           </div>
 
           <div class="blog-categories-pills" id="category-filter-container">
@@ -714,6 +725,26 @@
       searchInput.addEventListener('input', (e) => {
         currentQuery = e.target.value;
         renderArticles();
+      });
+
+      // Quick Keyword Tag clicks (instant search for main local keywords)
+      document.querySelectorAll('.quick-keyword-tag').forEach(tag => {
+        tag.addEventListener('click', () => {
+          const kw = tag.getAttribute('data-keyword');
+          currentCategory = 'all';
+          currentQuery = kw;
+          searchInput.value = kw;
+          categoryButtons.forEach(b => b.classList.remove('active'));
+          document.querySelector('.category-pill-btn[data-category="all"]')?.classList.add('active');
+          renderArticles();
+
+          const contentArea = document.querySelector('.blog-content-container');
+          if (contentArea) {
+            const yOffset = -90;
+            const y = contentArea.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        });
       });
 
       // Reset button

@@ -88,6 +88,59 @@
   z-index: 2;
 }
 
+/* Popular Local Topic Quick Tags */
+.blog-quick-keywords {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quick-keywords-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 4px;
+}
+
+.quick-keywords-label svg,
+.quick-keywords-label i {
+  width: 14px;
+  height: 14px;
+}
+
+.quick-keyword-tag {
+  background: rgba(13, 37, 53, 0.65);
+  border: 1px solid rgba(125, 217, 234, 0.22);
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.quick-keyword-tag:hover {
+  background: rgba(125, 217, 234, 0.16);
+  border-color: var(--accent-cyan);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(125, 217, 234, 0.15);
+}
+
 .blog-categories-pills {
   display: flex;
   align-items: center;
